@@ -1,0 +1,24 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="usuario" *ngIf="usuario">
+    <h1>{{usuario.nome}}</h1>
+    
+    <h3>Descrição:</h3>
+    <p>NOME: {{usuario?.nome}}</p>
+    <p>LOGIN:{{usuario?.login}}</p>
+    <p>SENHA: {{usuario?.senha}</p>
+   
+</div>
+
+<div class="acao" *ngIf="usuario">
+    <h3>Ações:</h3>
+    <a routerLink="/usuarios/edit/{{usuario.id}}" class="edit-btn">
+        <i class="bi bi-pencil-fill"></i>Editar
+    </a>
+    <button class="remove-btn">
+        <i class="bi bi-trash-fill"></i>Excluir
+    </button>
+</div>

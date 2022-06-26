@@ -1,0 +1,24 @@
+.combo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 60%;
+    margin: 0 auto;
+}
+h1{
+    margin-bottom: 500px;
+}
+.acao{
+    padding-bottom: 1em;
+    border-bottom: 1px solid #ccc;
+    padding: 1.2em;
+    width: 100%;
+    background-color: #eee;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+

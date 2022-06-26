@@ -1,0 +1,41 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<a routerLink="/usuarios/novo" class="edit-btn">
+    <i class="bi bi-pencil-fill"></i>Novo </a>
+<!--DESTAQUES-->
+<div class="home-container" id="featured-container">
+
+    <div class="col-12" id="featured-images">
+
+        <div class="row g-4" *ngIf="usuarios.length > 0; else noUsuarios ">            
+                    <!--IMAGEM COM O LOGOTIPO DAS ONGS-->
+                    <div class="col-12 col-md-4" *ngFor="let usuario of usuarios">
+                        
+                        <p class="secondary-color">NOME: {{usuario.nome}}</p>                            
+                            <p>LOGIN: {{usuario.login}}</p>
+                            <p>SENHA: {{usuario.senha}}</p>
+                           
+                            <div class="acao" *ngIf="usuario">
+                                <h3>Ações:</h3>
+                                <a routerLink="/usuarios/edit/{{usuario.id}}" class="edit-btn">
+                                    <i class="bi bi-pencil-fill"></i>Editar
+                                </a>
+                                <button class="remove-btn"(click)="removeHandler(usuario.id!)">
+                                    <i class="bi bi-trash-fill"></i>Excluir
+                                </button>
+                            </div>
+                    </div>
+                    
+        </div>
+        <ng-template #noUsuarios>
+            <h1>Não registros no sistema!</h1>
+        </ng-template>
+        
+
+    </div>
+</div>

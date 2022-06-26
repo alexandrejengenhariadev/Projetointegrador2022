@@ -1,0 +1,42 @@
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<a routerLink="/combos/novo" class="edit-btn">
+  <i class="bi bi-pencil-fill"></i>Novo </a>
+<div class="container mt-5" *ngFor="let combo of combos">
+    <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Produto 1</th>
+        <th scope="col">Produto 2</th>
+        <th scope="col">Produto 3</th>
+        <th scope="col">Produto 4</th>
+        <th scope="col">Valor</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!--Exibindo dados do banco de dados-->
+            <tr>
+            <td>{{combo.id}}</td>
+            <td>{{combo.produto1}}</td>
+            <td>{{combo.produto2}}</td>
+            <td>{{combo.produto3}}</td>
+            <td>{{combo.produto4}}</td>
+            <td>{{combo.valor}}</td>
+
+            <!--Botão editar-->
+            <td><a routerLink="/combos/edit/{{combo.id}}" class="edit-btn">
+              <i class="bi bi-pencil-fill"></i>Editar</a></td>
+            <!--Botão delete-->
+            <td> <button class="remove-btn" (click)="removeHandler(combo.id!)">
+              <i class="bi bi-trash-fill"></i>Excluir
+          </button>
+          </tr>
+
+    </tbody>
+  </table>
+

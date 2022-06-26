@@ -1,0 +1,14 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<div *ngIf="ong">
+<h2>Editando a ong: <Span>{{ong.nome}}</Span></h2>
+<app-ong-form 
+(onSubmit)="editHandler($event)"
+[ongData]="ong" 
+[btnText]="btnText">
+</app-ong-form>
+
+</div>

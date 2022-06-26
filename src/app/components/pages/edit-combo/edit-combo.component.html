@@ -1,0 +1,15 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<div *ngIf="combo">
+<h2>Editando o Combo: <Span>{{combo.id}}</Span></h2>
+<app-combo-form 
+(onSubmit)="editHandler($event)"
+[comboData]="combo" 
+[btnText]="btnText">
+</app-combo-form>
+
+</div>
+

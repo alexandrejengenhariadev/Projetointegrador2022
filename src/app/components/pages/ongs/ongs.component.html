@@ -1,0 +1,40 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<!--DESTAQUES-->
+<div class="home-container" id="featured-container">
+
+    <div class="col-12" id="featured-images">
+
+        <div class="row g-4" *ngIf="ongs.length > 0; else noOngs ">            
+                    <!--IMAGEM COM O LOGOTIPO DAS ONGS-->
+                    <div class="col-12 col-md-4" *ngFor="let ong of ongs">
+                        <img src="{{baseApiUrl}}uploads/{{ong.imagem}}" alt="{{ong.nome}}" class="img-fluid">
+                        <p class="secondary-color">ONG {{ong.nome}}</p>                            
+                            <p>CEP: {{ong.cep}}</p>
+                            <p>Endereço: {{ong.endereco}}</p>
+                            <p>Telefone: {{ong.telefone}}</p>
+                            <p>Responsável: {{ong.responsavel}}</p>
+                            <p>Email: {{ong.email}}</p>
+                            <div class="acao" *ngIf="ong">
+                                <h3>Ações:</h3>
+                                <a routerLink="/ongs/edit/{{ong.id}}" class="edit-btn">
+                                    <i class="bi bi-pencil-fill"></i>Editar
+                                </a>
+                                <button class="remove-btn"(click)="removeHandler(ong.id!)">
+                                    <i class="bi bi-trash-fill"></i>Excluir
+                                </button>
+                            </div>
+                    </div>
+                    
+        </div>
+        <ng-template #noOngs>
+            <h1>Não registros no sistema!</h1>
+        </ng-template>
+        
+
+    </div>
+</div>

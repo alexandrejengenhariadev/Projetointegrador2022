@@ -1,0 +1,24 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="ong" *ngIf="ong">
+    <h1>{{ong.nome}}</h1>
+    <img src="{{baseApiUrl}}uploads/{{ong.imagem}}" alt="{{ong.nome}}">
+    <h3>Descrição:</h3>
+    <p>CEP: {{ong?.cep}}</p>
+    <p>ENDEREÇO:{{ong?.endereco}}</p>
+    <p>TELEFONE: {{ong?.telefone}}</p>
+    <p>EMAIL: {{ong?.email}}</p>
+</div>
+
+<div class="acao" *ngIf="ong">
+    <h3>Ações:</h3>
+    <a routerLink="/ongs/edit/{{ong.id}}" class="edit-btn">
+        <i class="bi bi-pencil-fill"></i>Editar
+    </a>
+    <button class="remove-btn">
+        <i class="bi bi-trash-fill"></i>Excluir
+    </button>
+</div>
