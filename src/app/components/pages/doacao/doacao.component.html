@@ -4,10 +4,13 @@
 <br>
 <br>
 <br>
-<div class="row" >
-
+<div *ngIf="ong">
+  <h2>Doação para a ONG: <Span>{{ong.nome}}</Span></h2>
+   </div>
+  
+<div class="row" *ngIf="combos.length > 0; else noCombos ">
   <div class="col-sm-3" *ngFor="let combo of combos">
-    <div class="card card-block">
+    <div class="card card-block" >
        <div class="card-block">
         <h4 class="card-title">COMBO : {{combo.id}}</h4>
         <h4 class="card-title">R${{combo.valor}}</h4>
@@ -15,10 +18,13 @@
         <p class="card-text">Produto:{{combo.produto2}}</p>
         <p class="card-text">Produto:{{combo.produto3}}</p>
         <p class="card-text">Produto:{{combo.produto4}}</p>
-        <button type="submit" name="btn-doar" class="btn btn-primary">DOAR</button>
+        <button type="submit" name="btn-doar" class="btn btn-primary" (onSubmit)="createHandler(combo.valor, ong!.nome)">DOAR</button>
         <a href="home.php" class="btn btn-danger">Voltar</a>
       </div>
     </div>
   </div>
   
 </div>
+<ng-template #noCombos>
+  <h1>Não há registros no sistema!</h1>
+</ng-template>

@@ -44,8 +44,11 @@
                             <p class="secondary-color">ONG</p>                            
                             <h3>{{ong.nome}}</h3>
                             <form >
-                                <input type="hidden" >                                
-                                <button class="btn btn-danger">DOAR</button>
+                                <input type="hidden" > 
+                                <a routerLink="/doacao/edit/{{ong.id}}" class="edit-btn">
+                                    <i class="bi bi-pencil-fill">DOAR</i>
+                                </a>                              
+                               
                             </form>                            
                         </div>
                         <h3 class="text-center">{{ong.nome}}</h3>

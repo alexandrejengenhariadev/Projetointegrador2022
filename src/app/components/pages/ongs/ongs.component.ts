@@ -26,7 +26,7 @@ export class OngsComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    this.ongService.getOngs().subscribe((items)=>{
+      this.ongService.getOngs().subscribe((items)=>{
       const data = items.data
       this.allOngs = data
       this.ongs = data

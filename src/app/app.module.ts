@@ -27,7 +27,9 @@ import { UsuariosComponent } from './components/pages/usuarios/usuarios.componen
 import { NovoUsuarioComponent } from './components/pages/novo-usuario/novo-usuario.component';
 import { UsuarioFormComponent } from './components/usuario-form/usuario-form.component';
 import { EditUsuarioComponent } from './components/pages/edit-usuario/edit-usuario.component';
-import { DoacaoComponent } from './components/pages/doacao/doacao.component'
+import { DoacaoComponent } from './components/pages/doacao/doacao.component';
+import { FinalizaDoacaoComponent } from './components/pages/finaliza-doacao/finaliza-doacao.component';
+import { DoacaoFormComponent } from './components/doacao-form/doacao-form.component'
 
 @NgModule({
   declarations: [
@@ -53,7 +55,9 @@ import { DoacaoComponent } from './components/pages/doacao/doacao.component'
     NovoUsuarioComponent,
     UsuarioFormComponent,
     EditUsuarioComponent,
-    DoacaoComponent
+    DoacaoComponent,
+    FinalizaDoacaoComponent,
+    DoacaoFormComponent
   ],
   imports: [
     BrowserModule,

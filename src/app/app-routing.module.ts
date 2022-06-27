@@ -36,7 +36,9 @@ const routes: Routes = [
   {path:'usuarios/edit/:id',component:UsuarioComponent},
   {path:'usuarios/:id',component:UsuarioComponent},
   {path:'doacao',component:DoacaoComponent},
-  {path:'banner',component:BannerComponent}
+  {path:'banner',component:BannerComponent},
+  {path:'doacao/edit/:id',component:DoacaoComponent}
+  
 ];
 
 @NgModule({
