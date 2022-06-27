@@ -14,6 +14,7 @@ import { UsuarioComponent } from './components/pages/usuario/usuario.component';
 import { BannerComponent } from './components/pages/banner/banner.component';
 import { UsuariosComponent } from './components/pages/usuarios/usuarios.component';
 import { NovoUsuarioComponent } from './components/pages/novo-usuario/novo-usuario.component';
+import { DoacaoComponent } from './components/pages/doacao/doacao.component';
 
 
 
@@ -34,7 +35,7 @@ const routes: Routes = [
   {path:'usuarios/novo',component:NovoUsuarioComponent},
   {path:'usuarios/edit/:id',component:UsuarioComponent},
   {path:'usuarios/:id',component:UsuarioComponent},
-
+  {path:'doacao',component:DoacaoComponent},
   {path:'banner',component:BannerComponent}
 ];
 

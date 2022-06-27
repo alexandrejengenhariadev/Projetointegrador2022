@@ -1,0 +1,14 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<div *ngIf="usuario">
+<h2>Editando usuario: <Span>{{usuario.nome}}</Span></h2>
+<app-usuario-form 
+(onSubmit)="editHandler($event)"
+[usuarioData]="usuario" 
+[btnText]="btnText">
+</app-usuario-form>
+
+</div>
