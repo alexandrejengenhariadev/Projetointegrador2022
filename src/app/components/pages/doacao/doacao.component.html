@@ -18,8 +18,16 @@
         <p class="card-text">Produto:{{combo.produto2}}</p>
         <p class="card-text">Produto:{{combo.produto3}}</p>
         <p class="card-text">Produto:{{combo.produto4}}</p>
-        <button type="submit" name="btn-doar" class="btn btn-primary" (onSubmit)="createHandler(combo.valor, ong!.nome)">DOAR</button>
-        <a href="home.php" class="btn btn-danger">Voltar</a>
+     
+        <form >
+          <input type="hidden" > 
+          <a routerLink="/finaliza/{{ong!.id}}/{{combo.id}}" class="edit-btn">
+              <i class="bi bi-pencil-fill">DOAR</i>
+          </a>                              
+         
+      </form>
+        <a routerLink="/" class="btn btn-danger">Voltar</a>
+        
       </div>
     </div>
   </div>

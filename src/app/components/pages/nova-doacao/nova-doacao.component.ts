@@ -1,27 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { OngService } from 'src/app/services/ong.service';
-import { MensagensService } from 'src/app/services/mensagens.service';
-import { Ong } from 'src/app/Ong';
-import { DoacaoService } from 'src/app/services/doacao.service';
 import { Doacao } from 'src/app/Doacao';
+import { DoacaoService } from 'src/app/services/doacao.service';
+import { MensagensService } from 'src/app/services/mensagens.service';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Combo } from 'src/app/Combo';
+import { OngService } from 'src/app/services/ong.service';
+import { Ong } from 'src/app/Ong';
 import { ComboService } from 'src/app/services/combo.service';
 
-
 @Component({
-  selector: 'app-finaliza-doacao',
-  templateUrl: './finaliza-doacao.component.html',
-  styleUrls: ['./finaliza-doacao.component.css']
+  selector: 'app-nova-doacao',
+  templateUrl: './nova-doacao.component.html',
+  styleUrls: ['./nova-doacao.component.css']
 })
-export class FinalizaDoacaoComponent implements OnInit {
-  combo?: Combo;
-  allCombos: Combo[] = []
-  combos: Combo[] =[]
+export class NovaDoacaoComponent implements OnInit {
   ong!:Ong;
-  allOngs: Ong[]=[]
-  ongs: Ong[]=[]
-  doacao!:Doacao
+  combo!:Combo;
   btnText: string = "Doar";
 
   constructor(private comboService:ComboService,
@@ -44,7 +38,7 @@ export class FinalizaDoacaoComponent implements OnInit {
     });
   }
   async createHandler(){
-    const idCombo = String(this.combo!.id);
+    const idCombo = String(this.combo.id);
     const idOng = String(this.ong.id);
     const formData = new FormData();
     formData.append('nome',idOng);
@@ -52,11 +46,8 @@ export class FinalizaDoacaoComponent implements OnInit {
     
         
     await this.doacaoService.createDoacao(formData).subscribe();
-    this.mensagensService.add(`Doacao realizada com sucesso!`);
+    this.mensagensService.add(`Combo ${idCombo} ${idOng} ${formData} atualizado com sucesso!`);
     this.router.navigate(['/']);
   }
 
 }
-
-
-

@@ -12,7 +12,7 @@ import {Doacao} from 'src/app/Doacao';
 })
 export class DoacaoService {
   private baseApiUrl=environment.baseApiUrl;
-  private apiUrl = `${this.baseApiUrl}api/doacao`
+  private apiUrl = 'https://apipethelper.herokuapp.com/api/doacaos'
 
   constructor(private http: HttpClient) { }
   getDoacaos():Observable<Response<Doacao[]>>{

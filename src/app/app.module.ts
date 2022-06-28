@@ -29,7 +29,9 @@ import { UsuarioFormComponent } from './components/usuario-form/usuario-form.com
 import { EditUsuarioComponent } from './components/pages/edit-usuario/edit-usuario.component';
 import { DoacaoComponent } from './components/pages/doacao/doacao.component';
 import { FinalizaDoacaoComponent } from './components/pages/finaliza-doacao/finaliza-doacao.component';
-import { DoacaoFormComponent } from './components/doacao-form/doacao-form.component'
+import { DoacaoFormComponent } from './components/doacao-form/doacao-form.component';
+import { NovaDoacaoComponent } from './components/pages/nova-doacao/nova-doacao.component';
+import { CriaDoacaoComponent } from './components/cria-doacao/cria-doacao.component'
 
 @NgModule({
   declarations: [
@@ -57,7 +59,9 @@ import { DoacaoFormComponent } from './components/doacao-form/doacao-form.compon
     EditUsuarioComponent,
     DoacaoComponent,
     FinalizaDoacaoComponent,
-    DoacaoFormComponent
+    DoacaoFormComponent,
+    NovaDoacaoComponent,
+    CriaDoacaoComponent
   ],
   imports: [
     BrowserModule,

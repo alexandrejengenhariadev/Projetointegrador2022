@@ -31,7 +31,7 @@ export class OngsComponent implements OnInit {
       this.allOngs = data
       this.ongs = data
      });
-      //id que está na rul
+      //id que está na url
     const id = Number(this.route.snapshot.paramMap.get('id'));
     this.ongService
     .getOng(id)

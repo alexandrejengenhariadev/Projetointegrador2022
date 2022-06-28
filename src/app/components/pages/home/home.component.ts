@@ -11,7 +11,9 @@ export class HomeComponent implements OnInit {
   allOngs:Ong[] = [];
   ongs:Ong[] = [];
   baseApiUrl = environment.baseApiUrl;
+  ong!:Ong;
   searchTerm: string = "";
+  
 
 
   constructor(private ongService: OngService) { }

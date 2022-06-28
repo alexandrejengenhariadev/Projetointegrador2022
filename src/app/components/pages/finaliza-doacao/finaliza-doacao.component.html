@@ -4,7 +4,12 @@
 <br>
 <br>
 <div *ngIf="ong">
-<h2>Doação para ONG: <Span>{{ong.nome}}</Span></h2>
-<app-doacao-form></app-doacao-form>
-</div>
+<h2>Doacao para a Ong: <Span>{{ong.nome}}</Span></h2>
+<h2>Combo <span>{{combo!.id}}</span></h2>
+<h2>Valor <span>{{combo!.valor}}</span></h2>
+<button class="remove-btn" (click)="createHandler()">
+    <i class="bi bi-trash-fill"></i>Excluir
+</button>
 
+
+</div>

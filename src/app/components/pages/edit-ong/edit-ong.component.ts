@@ -27,7 +27,7 @@ export class EditOngComponent implements OnInit {
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get("id"));
     this.ongService.getOng(id).subscribe((item) =>{
-      this.ong = item.data;
+    this.ong = item.data;
     })
   }
   async editHandler(ongData: Ong){

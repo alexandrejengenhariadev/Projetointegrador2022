@@ -15,6 +15,9 @@ import { BannerComponent } from './components/pages/banner/banner.component';
 import { UsuariosComponent } from './components/pages/usuarios/usuarios.component';
 import { NovoUsuarioComponent } from './components/pages/novo-usuario/novo-usuario.component';
 import { DoacaoComponent } from './components/pages/doacao/doacao.component';
+import { FinalizaDoacaoComponent } from './components/pages/finaliza-doacao/finaliza-doacao.component';
+import { NovaDoacaoComponent } from './components/pages/nova-doacao/nova-doacao.component';
+import { CriaDoacaoComponent } from './components/cria-doacao/cria-doacao.component';
 
 
 
@@ -37,7 +40,11 @@ const routes: Routes = [
   {path:'usuarios/:id',component:UsuarioComponent},
   {path:'doacao',component:DoacaoComponent},
   {path:'banner',component:BannerComponent},
-  {path:'doacao/edit/:id',component:DoacaoComponent}
+  {path:'doacao/novo',component:NovaDoacaoComponent},
+  {path:'doacao/:id',component:DoacaoComponent},
+  {path:'finaliza/:idOng/:idCombo',component:FinalizaDoacaoComponent},
+  {path:'criadoacao/:idOng/:idCombo',component:CriaDoacaoComponent}
+  
   
 ];
 
