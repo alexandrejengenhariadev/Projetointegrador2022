@@ -7,6 +7,9 @@ import { DoacaoService } from 'src/app/services/doacao.service';
 import { Doacao } from 'src/app/Doacao';
 import { Combo } from 'src/app/Combo';
 import { ComboService } from 'src/app/services/combo.service';
+import {v4 as uuid, v4} from 'uuid';
+
+
 
 
 @Component({
@@ -42,13 +45,19 @@ export class FinalizaDoacaoComponent implements OnInit {
     this.comboService.getCombo(idCombo).subscribe((item) =>{
       this.combo = item.data;
     });
+    
   }
   async createHandler(){
     const idCombo = String(this.combo!.id);
     const idOng = String(this.ong.id);
+    const valorCombo = this.combo!.valor;
+    
     const formData = new FormData();
+    const controle = String(v4);
     formData.append('nome',idOng);
-    formData.append('valor',idCombo);
+    formData.append('valor',valorCombo);
+    formData.append('idCombo',idCombo);
+    formData.append('controle',controle);
     
         
     await this.doacaoService.createDoacao(formData).subscribe();
