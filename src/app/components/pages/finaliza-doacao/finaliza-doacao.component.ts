@@ -8,6 +8,8 @@ import { Doacao } from 'src/app/Doacao';
 import { Combo } from 'src/app/Combo';
 import { ComboService } from 'src/app/services/combo.service';
 import {v4 as uuid, v4} from 'uuid';
+import { environment } from 'src/environments/environment';
+
 
 
 
@@ -26,6 +28,7 @@ export class FinalizaDoacaoComponent implements OnInit {
   ongs: Ong[]=[]
   doacao!:Doacao
   btnText: string = "Doar";
+  baseApiUrl = environment.baseApiUrl;
 
   constructor(private comboService:ComboService,
               private route:ActivatedRoute,
@@ -62,7 +65,7 @@ export class FinalizaDoacaoComponent implements OnInit {
     
         
     await this.doacaoService.createDoacao(formData).subscribe();
-    this.mensagensService.add(`${idNome}${valorCombo}${idOng}${myId}`);
+    this.mensagensService.add(`Doação para a Ong ${idNome} feita com sucesso!`);
     this.router.navigate(['/']);
   }
 

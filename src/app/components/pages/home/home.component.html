@@ -45,8 +45,9 @@
                             <h3>{{ong.nome}}</h3>
                             <form >
                                 <input type="hidden" > 
-                                <a routerLink="/doacao/{{ong.id}}" class="edit-btn">
-                                    <i class="bi bi-pencil-fill">DOAR</i>
+                                <a routerLink="/doacao/{{ong.id}}" class="btn btn-danger">
+                                    
+                                    <i class="bi bi-capslock">DOAR</i>
                                 </a>                              
                                
                             </form>                            
@@ -96,20 +97,23 @@
                         <div class="row">
                             <div class="col-4">
                                 <h2 class="text-center">DOAÇÕES</h2>
-                                <h3 class="primary-color text-center">teste3</h3>
-                                <p class="primary-color text-center">Doações</p>
+                                <p class="primary-color text-center">Feitas</p>
+                                <h3 class="primary-color text-center">{{doacaos.length}}</h3>
+                                
                             </div>
 
                             <div class="col-4">
                             <h2 class="text-center">ONGS</h2>
-                                <h3 class="primary-color text-center">teste4</h3>
-                                <p class="primary-color text-center">ONGS Cadastradas</p>
+                            <p class="primary-color text-center">Cadastradas</p>
+                                <h3 class="primary-color text-center">{{ongs.length}}</h3>
+                                
                             </div>
 
                             <div class="col-4">
                             <h2 class="text-center">VALORES</h2>
-                                <h3 class="primary-color text-center">teste5</h3>
-                                <p class="primary-color text-center">Valores arrecadados</p>
+                            <p class="primary-color text-center">arrecadados</p>
+                                <h3 class="primary-color text-center" >{{Soma()}}</h3>
+                                
                             </div>
                         </div>
                     </div>
