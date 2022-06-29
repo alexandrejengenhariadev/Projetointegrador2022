@@ -48,20 +48,21 @@ export class FinalizaDoacaoComponent implements OnInit {
     
   }
   async createHandler(){
-    const idCombo = String(this.combo!.id);
     const idOng = String(this.ong.id);
+    const idNome = String(this.ong.id);
     const valorCombo = this.combo!.valor;
     
     const formData = new FormData();
-    const controle = String(v4);
-    formData.append('nome',idOng);
+    
+    const myId = uuid();
+    formData.append('nome',idNome);
     formData.append('valor',valorCombo);
-    formData.append('idCombo',idCombo);
-    formData.append('controle',controle);
+    formData.append('id_ong',idOng);
+    formData.append('controle',myId);
     
         
     await this.doacaoService.createDoacao(formData).subscribe();
-    this.mensagensService.add(`Doacao realizada com sucesso!`);
+    this.mensagensService.add(`${idNome}${valorCombo}${idOng}${myId}`);
     this.router.navigate(['/']);
   }
 
