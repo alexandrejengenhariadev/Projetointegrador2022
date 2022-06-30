@@ -31,7 +31,8 @@ import { DoacaoComponent } from './components/pages/doacao/doacao.component';
 import { FinalizaDoacaoComponent } from './components/pages/finaliza-doacao/finaliza-doacao.component';
 import { DoacaoFormComponent } from './components/doacao-form/doacao-form.component';
 import { NovaDoacaoComponent } from './components/pages/nova-doacao/nova-doacao.component';
-import { CriaDoacaoComponent } from './components/cria-doacao/cria-doacao.component'
+import { CriaDoacaoComponent } from './components/cria-doacao/cria-doacao.component';
+import { LoginComponent } from './components/pages/login/login.component'
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { CriaDoacaoComponent } from './components/cria-doacao/cria-doacao.compon
     FinalizaDoacaoComponent,
     DoacaoFormComponent,
     NovaDoacaoComponent,
-    CriaDoacaoComponent
+    CriaDoacaoComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

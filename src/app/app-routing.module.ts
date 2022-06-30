@@ -18,6 +18,7 @@ import { DoacaoComponent } from './components/pages/doacao/doacao.component';
 import { FinalizaDoacaoComponent } from './components/pages/finaliza-doacao/finaliza-doacao.component';
 import { NovaDoacaoComponent } from './components/pages/nova-doacao/nova-doacao.component';
 import { CriaDoacaoComponent } from './components/cria-doacao/cria-doacao.component';
+import { LoginComponent } from './components/pages/login/login.component';
 
 
 
@@ -43,7 +44,8 @@ const routes: Routes = [
   {path:'doacao/novo',component:NovaDoacaoComponent},
   {path:'doacao/:id',component:DoacaoComponent},
   {path:'finaliza/:idOng/:idCombo',component:FinalizaDoacaoComponent},
-  {path:'criadoacao/:idOng/:idCombo',component:CriaDoacaoComponent}
+  {path:'criadoacao/:idOng/:idCombo',component:CriaDoacaoComponent},
+  {path:'login',component:LoginComponent}
   
   
 ];
