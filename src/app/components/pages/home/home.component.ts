@@ -57,6 +57,12 @@ export class HomeComponent implements OnInit {
                      
 
   };
+  fontegrande ()
+  {
+    var css = document.querySelector('#css');
+    css!.setAttribute('href', 'estilosmaiorecontraste.css');
+  }
+
 
 };
 

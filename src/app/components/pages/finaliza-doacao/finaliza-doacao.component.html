@@ -11,7 +11,9 @@
           <h5 class="card-title">Doação para: <Span>{{ong.nome}}</Span></h5>
           <h2>Combo: <span>{{combo!.id}}</span></h2>
           <h2>Valor: R$ <span>{{combo!.valor}}</span></h2>
-          <p>{{combo!.produto1}}, {{combo!.produto2}}, {{combo!.produto3}}, {{combo!.produto4}}</p>
+          <p>=>{{combo!.produto1}}</p>
+          <p>=>{{combo!.produto3}}</p>  
+          <p>=>{{combo!.produto4}}</p>
           <button class="btn btn-danger" (click)="createHandler()">    
             <i class="bi bi-check-square">OK</i>
           </button>

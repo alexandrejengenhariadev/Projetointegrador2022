@@ -41,8 +41,8 @@
                     <div class="col-12 col-md-4" *ngFor="let ong of ongs">
                         <img src="{{baseApiUrl}}uploads/{{ong.imagem}}" alt="{{ong.nome}}" class="img-fluid">
                         <div class="banner-content">
-                            <p class="secondary-color">ONG</p>                            
-                            <h3>{{ong.nome}}</h3>
+                            <p class="secondary-color" style="font-size: 1rem;">ONG</p>                            
+                            <h3 style="font-size: 1rem;">{{ong.nome}}</h3>
                             <form >
                                 <input type="hidden" > 
                                 <a routerLink="/doacao/{{ong.id}}" class="btn btn-danger">

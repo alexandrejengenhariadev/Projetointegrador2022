@@ -21,12 +21,12 @@ export class NovaOngComponent implements OnInit {
   async createHandler(ong:Ong){
     const formData = new FormData();
     formData.append("nome",ong.nome);
-    formData.append("cep",ong.nome);
-    formData.append("endereco",ong.nome);
-    formData.append("telefone",ong.nome);
-    formData.append("responsavel",ong.nome);
-    formData.append("email",ong.nome);
-    formData.append("imagem",ong.nome);
+    formData.append("cep",ong.cep);
+    formData.append("endereco",ong.endereco);
+    formData.append("telefone",ong.telefone);
+    formData.append("responsavel",ong.responsavel);
+    formData.append("email",ong.email);
+    formData.append("imagem",ong.imagem);
    
     if(ong.imagem){
       formData.append('imagem',ong.imagem);

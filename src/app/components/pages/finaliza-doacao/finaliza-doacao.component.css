@@ -1,14 +1,21 @@
 @import "~bootstrap-icons/font/bootstrap-icons.css";
-h2{
-    text-align: center;
+p{
+    text-align: left;
     margin-bottom: 1em;
-    font-size: 2.2em;
+    font-size: .8em;
+
+}
+h2, h5{
+    text-align: left;
+    margin-bottom: 1em;
+    font-size: 1.1em;
 }
 h2 span{
     color: red;
 }
 h5 span{
     color: red;
+    
 }
 .btn{
     display: flex;
@@ -26,5 +33,5 @@ a {
 }
 .card{
    
-    width: 24rem;
+    width: 22rem;
 }
